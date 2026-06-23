@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    background-color: #f8f5ee;
+    font-family: Arial, sans-serif;
+    color: #2e3b1f;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+header h1 {
+    color: #556b2f;
+    font-size: 32px;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #2e3b1f;
+    font-weight: bold;
+}
+
+section {
+    padding: 100px 60px;
+}
+
+section h2 {
+    font-size: 52px;
+    max-width: 700px;
+}
+
+section p {
+    font-size: 22px;
+}
+\2f5d2f
+.button {
+    background-color: #556b2f;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    display: inline-block;
+}
