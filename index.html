@@ -2,26 +2,306 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Olivada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLIVADA | Dalından Sofranıza</title>
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Italianno&family=Linden+Hill:wght@400;700&family=Itim&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <header>
-        <h1>OLIVADA</h1>
+<header class="navbar" id="anasayfa">
+    <div class="logo">
+        <img src="images/logo.png" alt="OLIVADA Logo">
+    </div>
 
-        <nav>
-            <a href="index.html">Ana Sayfa</a>
-            <a href="products.html">Ürünler</a>
-            <a href="about.html">Hakkımızda</a>
-            <a href="contact.html">İletişim</a>
-        </nav>
-    </header>
+    <nav class="menu">
+        <a href="#anasayfa">ANASAYFA</a>
+        <a href="#urunler">ÜRÜNLERİMİZ</a>
+        <a href="#hakkimizda">HAKKIMIZDA</a>
+        <a href="#iletisim">İLETİŞİM</a>
+    </nav>
+</header>
 
-    <section>
-        <h2>Akdeniz'in Doğal Zeytin ve Zeytinyağları</h2>
-        <p>Olivada ile doğallığı sofranıza taşıyın.</p>
-<a class="button" href="products.html">Ürünleri İncele</a>    </section>
+<section class="hero">
+    <img src="images/hero.png" alt="Zeytinlik">
 
+    <div class="hero-text">
+        <span>Dalından Sofranıza</span>
+
+        <h1>
+            Zeytin ve<br>
+            Zeytinyağının<br>
+            en saf hali
+        </h1>
+
+        <p>
+            Kozan’ın bereketli topraklarından gelen doğal lezzetleri
+            sofralarınıza ulaştırıyoruz.
+        </p>
+
+        <a href="#urunler">Ürünleri İncele</a>
+    </div>
+</section>
+
+<section class="products" id="urunler">
+    <h2 class="section-title">ÜRÜNLERİMİZ</h2>
+
+    <div class="products-container">
+
+    <div class="product-card">
+        <img class="product-img" src="images/zeytin.png" alt="Zeytin">
+
+        <div class="icon-circle">
+            <img src="images/zeytin-icon.png" alt="">
+        </div>
+
+        <h3>ZEYTİN</h3>
+
+        <p>Doğal yöntemlerle işlenmiş, taptaze ve lezzetli zeytin çeşitleri...</p>
+
+        <button class="detail-btn" data-product="zeytin">Detaylı İncele</button>
+    </div>
+
+
+    <div class="product-card">
+        <img class="product-img" src="images/zeytinyagi.png" alt="Zeytinyağı">
+
+        <div class="icon-circle">
+            <img src="images/zeytinyagi-icon.png" alt="">
+        </div>
+
+        <h3>ZEYTİNYAĞI</h3>
+
+        <p>Yüksek kalite standartlarında üretilmiş doğal zeytinyağlarımız...</p>
+
+        <button class="detail-btn" data-product="zeytinyagi">Detaylı İncele</button>
+    </div>
+
+
+    <div class="product-card">
+        <img class="product-img" src="images/salamura.png" alt="Salamura">
+
+        <div class="icon-circle">
+            <img src="images/salamura-icon.png" alt="">
+        </div>
+
+        <h3>SALAMURA</h3>
+
+        <p>Geleneksel yöntemlerle hazırlanmış doğal salamura ürünleri...</p>
+
+        <button class="detail-btn" data-product="salamura">Detaylı İncele</button>
+    </div>
+
+</div>
+</section>
+
+<section class="about" id="hakkimizda">
+    <h2 class="section-title">HAKKIMIZDA</h2>
+
+    <div class="about-content">
+        <div class="about-image">
+            <img src="images/hakkimizda.png" alt="Kozan Adana">
+            <span>📍 KOZAN / ADANA</span>
+        </div>
+
+        <div class="about-text">
+            <p>Olivada, Adana'nın bereketli topraklarında, özellikle Kozan ilçesinin doğal ortamında yetişen zeytinlerden ilham alarak kurulmuştur.</p>
+
+            <p>Kaliteyi, doğallığı ve geleneksel lezzeti bir araya getirerek, özenle seçilen ürünlerimizi sofralarınıza ulaştırıyoruz.</p>
+
+            <p>Her bir zeytin tanesinde emeğin, doğanın ve güvenin izini taşıyor; dalından sofranıza uzanan bu yolculukta en saf lezzeti sunmayı amaçlıyoruz.</p>
+
+            <p>Kozan'ın verimli topraklarından gelen bu eşsiz lezzeti Türkiye'nin dört bir yanındaki sofralarla buluşturmanın gururunu yaşıyoruz.</p>
+
+            <p class="green-text">📍 Kozan / Adana</p>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+
+    <div class="feature-box">
+        <div class="feature-icon">
+            <img src="images/zeytin-black.png" alt="Doğal">
+        </div>
+
+        <h3>Doğal</h3>
+        <p>
+            Katkısız ve doğal yöntemlerle
+            üretilen ürünler sunuyoruz.
+        </p>
+    </div>
+
+    <div class="feature-box">
+        <div class="feature-icon">
+            <img src="images/agac-black.png" alt="Yerel">
+        </div>
+
+        <h3>Yerel</h3>
+        <p>
+            Kozan'ın bereketli
+            topraklarında üretim
+            yapıyoruz.
+        </p>
+    </div>
+
+    <div class="feature-box">
+        <div class="feature-icon">
+            <img src="images/zeytinyagi-black.png" alt="Kaliteli">
+        </div>
+
+        <h3>Kaliteli</h3>
+        <p>
+            Yüksek kalite
+            standartlarında özenle
+            üretilir.
+        </p>
+    </div>
+
+    <div class="feature-box">
+        <div class="feature-icon">
+            <img src="images/insan-black.png" alt="Güvenilir">
+        </div>
+
+        <h3>Güvenilir</h3>
+        <p>
+            Müşteri memnuniyetini
+            her zaman ön planda
+            tutuyoruz.
+        </p>
+    </div>
+
+</section>
+<section class="contact" id="iletisim">
+    <h2 class="section-title">İLETİŞİM</h2>
+
+    <div class="contact-content">
+
+        <div class="contact-image">
+            <img src="images/iletisim.png" alt="İletişim">
+        </div>
+
+        <div class="contact-info">
+            <p class="contact-desc">
+                Sorularınız, talepleriniz veya iş birliği fırsatları için bizimle iletişime geçmenizden mutluluk duyarız.
+            </p>
+
+            <div class="info-item">
+                <img src="images/telephone.png" alt="">
+                <div>
+                    <h3>TELEFON</h3>
+                    <p>+90 333 333 33 33</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <img src="images/email.png" alt="">
+                <div>
+                    <h3>E-POSTA</h3>
+                    <p>olivada01shn@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <img src="images/location.png" alt="">
+                <div>
+                    <h3>ADRES</h3>
+                    <p>Kozan / Adana / Türkiye</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <img src="images/clock.png" alt="">
+                <div>
+                    <h3>ÇALIŞMA SAATLERİ</h3>
+                    <p>Pazartesi - Cumartesi<br>08.00 - 18.00</p>
+                </div>
+            </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); document.getElementById('formMessage').textContent='Mesajınız alındı. En kısa sürede dönüş yapılacaktır.'; document.getElementById('formMessage').classList.add('show'); this.reset(); return false;">
+            <h3>Bize Ulaşın</h3>
+
+            <input type="text" placeholder="Adınız Soyadınız" required>
+            <input type="email" placeholder="E-posta Adresiniz" required>
+            <input type="text" placeholder="Konu" required>
+            <textarea placeholder="Mesajınız" required></textarea>
+
+            <button type="submit">Gönder</button>
+
+            <p class="form-message" id="formMessage"></p>
+        </form>
+
+    </div>
+</section>
+
+
+
+<footer class="footer">
+    <div class="footer-logo">
+        <img src="images/logo.png" alt="OLIVADA Logo">
+    </div>
+
+    <div class="footer-box">
+        <h3>İLETİŞİM</h3>
+        <p>📍 Kozan / Adana</p>
+        <p>📞 +90 333 333 33 33</p>
+        <p>✉ olivada01shn@gmail.com</p>
+    </div>
+
+    <div class="footer-box">
+        <h3>BİZİ TAKİP EDİN</h3>
+        <p>Instagram</p>
+        <p>WhatsApp</p>
+        <p>Facebook</p>
+    </div>
+
+    <div class="footer-box">
+        <h3>HIZLI ERİŞİM</h3>
+        <a href="#anasayfa">Anasayfa</a>
+        <a href="#urunler">Ürünlerimiz</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#iletisim">İletişim</a>
+    </div>
+</footer>
+<div class="olive-rain"></div>
+<div class="product-popup" id="productPopup">
+
+    <div class="popup-content">
+
+        <span class="close-popup" id="closePopup">&times;</span>
+
+        <img id="popupImage" src="" alt="Ürün Görseli">
+
+        <div class="popup-info">
+            <h2 id="popupTitle">Ürün Adı</h2>
+
+            <p id="popupDescription">
+                Ürün açıklaması burada görünecek.
+            </p>
+
+            <div class="popup-price-box">
+                <span>1 KG Fiyatı:</span>
+                <strong id="popupPrice">0 TL</strong>
+            </div>
+
+            <div class="order-buttons">
+                <a id="whatsappOrder" href="#" target="_blank" class="whatsapp-btn">
+                    WhatsApp'tan Sipariş Ver
+                </a>
+
+                <a id="instagramOrder" href="#" target="_blank" class="instagram-btn">
+                    Instagram'dan Sipariş Ver
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -1,48 +1,914 @@
-body {
+* {
     margin: 0;
-    background-color: #f8f5ee;
-    font-family: Arial, sans-serif;
-    color: #2e3b1f;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #c9c5bc;
+    color: #222;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+section,
+header,
+footer {
+    position: relative;
+    z-index: 2;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    height: 135px;
+    background-color: #c9c5bc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 85px;
+}
+
+.logo img {
+    width: 165px;
+    display: block;
+}
+
+.menu {
+    display: flex;
+    gap: 65px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #111;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    color: #556b2f;
+}
+
+/* HERO */
+
+.hero {
+    width: 100%;
+    height: 560px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.05)
+    );
+    z-index: 1;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-text {
+    position: absolute;
+    left: 85px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 600px;
+    color: #f4eee2;
+}
+
+.hero-text span {
+    display: inline-block;
+    font-family: "Linden Hill", serif;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #e3d99b;
+    margin-bottom: 12px;
+}
+
+.hero-text h1 {
+    font-family: "Italianno", cursive;
+    font-size: 82px;
+    font-weight: 400;
+    line-height: 0.9;
+    margin-bottom: 22px;
+}
+
+.hero-text h1 br + br {
+    display: none;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 520px;
+    margin-bottom: 28px;
+    color: #f7f1e5;
+}
+
+.hero-text a {
+    display: inline-block;
+    background-color: rgba(85, 107, 47, 0.9);
+    color: #f4eee2;
+    text-decoration: none;
+    padding: 14px 30px;
+    border: 1px solid #d8d6b2;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.hero-text a:hover {
+    background-color: #3f5124;
+    transform: translateY(-3px);
+}
+/* GENEL BAŞLIK */
+
+.section-title {
+    font-family: "Linden Hill", serif;
+    font-size: 52px;
+    color: #556b2f;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+/* ÜRÜNLER */
+
+.products {
+    width: 100%;
+    padding: 35px 20px 80px;
+    overflow: visible;
+}
+
+.products-container {
+    width: 100%;
+    max-width: 950px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    justify-items: center;
+    align-items: start;
+}
+
+.product-card {
+    width: 100%;
+    max-width: 260px;
+    height: 395px;
+    background-color: #b8c39a;
+    border: 2px solid #596b3a;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.30);
+}
+
+.product-img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+.icon-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #c9c5bc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -32px auto 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.icon-circle img {
+    width: 175px;
+    height: 175px;
+    object-fit: contain;
+}
+
+.product-card h3 {
+    font-family: "Linden Hill", serif;
+    font-size: 34px;
+    color: #4d6235;
+    margin: 8px 0 12px;
+    line-height: 1.1;
+}
+
+.product-card p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    min-height: 62px;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    background-color: #556b2f;
+    color: #f4eee2;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 16px;
+    font-family: "Itim", cursive;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: auto;
+}
+
+.product-card button:hover {
+    background-color: #3f5124;
+}
+
+/* HAKKIMIZDA */
+
+.about {
+    padding: 60px 85px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image {
+    flex: 1;
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+.about-image span {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.green-text {
+    color: #556b2f;
+    font-weight: 700;
+}
+
+/* ÖZELLİKLER */
+
+.features {
+    padding: 40px 85px 75px;
     display: flex;
     justify-content: space-between;
+    gap: 30px;
+}
+
+.feature-box {
+    flex: 1;
+    text-align: center;
+}
+
+.feature-icon {
+    width: 90px;
+    height: 90px;
+    border: 3px solid #0f8b2d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 25px 60px;
+    margin: 0 auto 18px;
 }
 
-header h1 {
+.feature-icon img,
+.feature-box img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-box h3 {
+    font-family: "Italianno", cursive;
+    font-size: 42px;
     color: #556b2f;
-    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 8px;
 }
 
-nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: #2e3b1f;
-    font-weight: bold;
+.feature-box p {
+    font-size: 15px;
+    line-height: 1.6;
 }
 
-section {
-    padding: 100px 60px;
+/* İLETİŞİM */
+
+.contact {
+    padding: 60px 85px 80px;
 }
 
-section h2 {
-    font-size: 52px;
-    max-width: 700px;
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+    align-items: stretch;
 }
 
-section p {
-    font-size: 22px;
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
 }
-\2f5d2f
-.button {
-    background-color: #556b2f;
-    color: white;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 30px;
+
+.contact-info {
+    background-color: #b8c39a;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-desc {
     font-size: 16px;
-    display: inline-block;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.info-item img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.info-item h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #556b2f;
+    margin-bottom: 4px;
+}
+
+.info-item p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.contact-form {
+    background-color: #b8c39a;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-form h3 {
+    font-family: "Linden Hill", serif;
+    font-size: 34px;
+    color: #556b2f;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    padding: 13px;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+    background-color: #f4eee2;
+}
+
+.contact-form textarea {
+    height: 130px;
+    resize: none;
+}
+
+.contact-form button {
+    width: 100%;
+    border: none;
+    background-color: #556b2f;
+    color: #f4eee2;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #3f5124;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #556b2f;
+    color: #f4eee2;
+    padding: 45px 85px;
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.footer-logo img {
+    width: 220px;
+    height: auto;
+}
+
+.footer-box h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-box p,
+.footer-box a {
+    display: block;
+    color: #f4eee2;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 8px;
+    transition: 0.3s ease;
+}
+
+.footer-box a:hover {
+    color: #c9c5bc;
+    padding-left: 5px;
+}
+
+/* ZEYTİN ANİMASYONU */
+
+.olive-rain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.olive-rain span {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: url("../images/zeytin-icon.png") center/contain no-repeat;
+    opacity: 0.35;
+    animation: floatOlive 18s linear infinite;
+}
+
+.olive-rain span:nth-child(1) { left: -120px; top: 10%; animation-delay: 0s; }
+.olive-rain span:nth-child(2) { left: 105%; top: 20%; animation-delay: -4s; }
+.olive-rain span:nth-child(3) { left: -120px; top: 45%; animation-delay: -8s; }
+.olive-rain span:nth-child(4) { left: 105%; top: 65%; animation-delay: -12s; }
+.olive-rain span:nth-child(5) { left: 20%; top: -120px; animation-delay: -3s; }
+.olive-rain span:nth-child(6) { left: 70%; top: -120px; animation-delay: -10s; }
+
+.olive {
+    position: absolute;
+    background-image: url("../images/zeytin-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    pointer-events: none;
+    opacity: 0.35;
+}
+
+@keyframes floatOlive {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(0.8);
+    }
+
+    25% {
+        transform: translate(180px, 80px) rotate(70deg) scale(1);
+    }
+
+    50% {
+        transform: translate(-80px, 180px) rotate(160deg) scale(1.15);
+    }
+
+    75% {
+        transform: translate(120px, 280px) rotate(260deg) scale(0.95);
+    }
+
+    100% {
+        transform: translate(260px, 420px) rotate(360deg) scale(0.8);
+    }
+}
+
+/* ÜRÜN POPUP */
+
+.product-popup {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.58);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.product-popup.active {
+    display: flex;
+}
+
+.popup-content {
+    width: 90%;
+    max-width: 720px;
+    max-height: 90vh;
+    background-color: #eef3df;
+    border: 2px solid #4d632c;
+    border-radius: 22px;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.35);
+    overflow-y: auto;
+    animation: popupOpen 0.3s ease;
+}
+
+@keyframes popupOpen {
+    from {
+        transform: scale(0.88);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close-popup {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    width: 34px;
+    height: 34px;
+    background-color: #4d632c;
+    color: white;
+    border-radius: 50%;
+    font-size: 26px;
+    line-height: 31px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#popupImage {
+    width: 48%;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 17px;
+    border: 2px solid #4d632c;
+    display: block;
+}
+
+.popup-info {
+    width: 52%;
+}
+
+.popup-info h2 {
+    font-family: "Linden Hill", serif;
+    font-size: 40px;
+    color: #4d632c;
+    margin-bottom: 15px;
+}
+
+.popup-info p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.popup-price-box {
+    border-top: 1px dashed #7b8d54;
+    border-bottom: 1px dashed #7b8d54;
+    padding: 16px 0;
+    margin-bottom: 22px;
+}
+
+.popup-price-box span {
+    display: block;
+    font-size: 15px;
+    color: #4d632c;
+    margin-bottom: 5px;
+}
+
+.popup-price-box strong {
+    font-size: 30px;
+    color: #4d632c;
+}
+
+.order-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.order-buttons a {
+    text-decoration: none;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+}
+
+.instagram-btn {
+    background-color: #4d632c;
+    color: white;
+}
+
+.whatsapp-btn:hover,
+.instagram-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .about-content,
+    .features,
+    .footer {
+        flex-direction: column;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 620px;
+    }
+
+    .popup-content {
+        flex-direction: column;
+        max-width: 430px;
+        padding: 24px;
+    }
+
+    #popupImage {
+        width: 100%;
+        height: 220px;
+    }
+
+    .popup-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .popup-info h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 520px) {
+    .products-container {
+        grid-template-columns: 1fr;
+        max-width: 310px;
+    }
+
+    .slogan h1 {
+        font-size: 44px;
+    }
+
+    .section-title {
+        font-size: 42px;
+    }
+
+    .about,
+    .contact,
+    .features,
+    .footer {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}@media (max-width: 760px) {
+    .hero {
+        height: 430px;
+    }
+
+    .hero-text {
+        left: 30px;
+        right: 30px;
+        max-width: none;
+    }
+
+    .hero-text h1 {
+        font-size: 56px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .hero-text span {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero {
+        height: 390px;
+    }
+
+    .hero-text h1 {
+        font-size: 46px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .hero-text a {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+}/* HERO ACİL DÜZELTME */
+
+.hero {
+    width: 100% !important;
+    height: 560px !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.hero img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+.hero::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.05)
+    ) !important;
+    z-index: 1 !important;
+}
+
+.hero-text {
+    position: absolute !important;
+    left: 85px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 2 !important;
+    max-width: 600px !important;
+    color: #f4eee2 !important;
+}
+
+.hero-text span {
+    display: inline-block !important;
+    font-family: "Linden Hill", serif !important;
+    font-size: 24px !important;
+    color: #e3d99b !important;
+    margin-bottom: 12px !important;
+}
+
+.hero-text h1 {
+    font-family: "Italianno", cursive !important;
+    font-size: 82px !important;
+    font-weight: 400 !important;
+    line-height: 0.9 !important;
+    margin-bottom: 22px !important;
+    color: #f4eee2 !important;
+}
+
+.hero-text p {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    max-width: 520px !important;
+    margin-bottom: 28px !important;
+    color: #f7f1e5 !important;
+}
+
+.hero-text a {
+    display: inline-block !important;
+    background-color: rgba(85, 107, 47, 0.9) !important;
+    color: #f4eee2 !important;
+    text-decoration: none !important;
+    padding: 14px 30px !important;
+    border: 1px solid #d8d6b2 !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+}
+
+@media (max-width: 760px) {
+    .hero {
+        height: 430px !important;
+    }
+
+    .hero-text {
+        left: 30px !important;
+        right: 30px !important;
+    }
+
+    .hero-text h1 {
+        font-size: 56px !important;
+    }
+
+    .hero-text p {
+        font-size: 15px !important;
+    }
+}.form-message {
+    display: none;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #f4eee2;
+    color: #556b2f;
+    border: 1px solid #556b2f;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.form-message.show {
+    display: block;
 }
