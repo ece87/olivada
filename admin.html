@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Olivada Admin</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+
+<body>
+
+    <main class="admin-page">
+
+
+        <!-- GİRİŞ ALANI -->
+
+        <section id="loginSection">
+
+            <h1>Olivada Admin 🌿</h1>
+
+            <p>
+                Yönetim paneline giriş yapın.
+            </p>
+
+
+            <form id="loginForm">
+
+                <label for="adminPassword">
+                    Şifre
+                </label>
+
+                <input
+                    type="password"
+                    id="adminPassword"
+                    required
+                >
+
+
+                <button type="submit">
+                    Giriş Yap
+                </button>
+
+            </form>
+
+
+            <p id="loginMessage"></p>
+
+        </section>
+
+
+
+        <!-- ADMIN PANEL -->
+
+        <section
+            id="adminPanel"
+            hidden
+        >
+
+            <h1>Sipariş Yönetimi 🌿</h1>
+
+
+            <button id="logoutButton">
+                Çıkış Yap
+            </button>
+
+            <section class="admin-stats">
+
+    <div class="stat-card">
+        <span class="stat-title">
+            Toplam Sipariş
+        </span>
+
+        <strong id="totalOrders">
+            0
+        </strong>
+    </div>
+
+
+    <div class="stat-card">
+        <span class="stat-title">
+            Yeni Sipariş
+        </span>
+
+        <strong id="newOrders">
+            0
+        </strong>
+    </div>
+
+
+    <div class="stat-card">
+        <span class="stat-title">
+            Hazırlanıyor
+        </span>
+
+        <strong id="preparingOrders">
+            0
+        </strong>
+    </div>
+
+
+    <div class="stat-card">
+        <span class="stat-title">
+            Tamamlandı
+        </span>
+
+        <strong id="completedOrders">
+            0
+        </strong>
+    </div>
+
+</section>
+
+<section class="admin-filters">
+
+    <input
+        type="search"
+        id="orderSearch"
+        placeholder="Müşteri, telefon veya ürün ara..."
+    >
+
+
+    <select id="statusFilter">
+
+        <option value="all">
+            Tüm Durumlar
+        </option>
+
+        <option value="Yeni Sipariş">
+            Yeni Sipariş
+        </option>
+
+        <option value="Hazırlanıyor">
+            Hazırlanıyor
+        </option>
+
+        <option value="Kargoya Verildi">
+            Kargoya Verildi
+        </option>
+
+        <option value="Tamamlandı">
+            Tamamlandı
+        </option>
+
+        <option value="İptal Edildi">
+            İptal Edildi
+        </option>
+
+    </select>
+
+</section>
+
+            <div id="ordersContainer">
+
+                <p>
+                    Siparişler yükleniyor...
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+<!-- SİPARİŞ DETAY PENCERESİ -->
+
+<div
+    id="orderModal"
+    class="order-modal"
+    hidden
+>
+
+    <div class="order-modal-content">
+
+        <button
+            id="closeOrderModal"
+            class="close-order-modal"
+            type="button"
+        >
+            ×
+        </button>
+
+
+        <h2>
+            Sipariş Detayları
+        </h2>
+
+
+        <div id="orderModalBody">
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>
