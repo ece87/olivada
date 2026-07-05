@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ürünlerimiz | OLIVADA</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="products-page">
+
+        <section class="products-header">
+            <h1>Ürünlerimiz</h1>
+
+            <p>
+                Doğallığı dalından sofranıza taşıyoruz.
+            </p>
+        </section>
+
+
+        <section class="product-list">
+
+            <!-- ZEYTİNYAĞI -->
+            <article class="product-card">
+
+                <h2>Zeytinyağı</h2>
+
+                <p>
+                    Doğal ve kaliteli zeytinlerden elde edilen
+                    Olivada zeytinyağı.
+                </p>
+
+                <button
+                    class="order-button"
+                    data-product="Zeytinyağı"
+                >
+                    Sipariş Ver
+                </button>
+
+            </article>
+
+
+            <!-- ZEYTİN -->
+            <article class="product-card">
+
+                <h2>Zeytin</h2>
+
+                <p>
+                    Özenle seçilmiş doğal sofralık zeytinler.
+                </p>
+
+                <button
+                    class="order-button"
+                    data-product="Zeytin"
+                >
+                    Sipariş Ver
+                </button>
+
+            </article>
+
+
+            <!-- SALAMURA -->
+            <article class="product-card">
+
+                <h2>Salamura Zeytin</h2>
+
+                <p>
+                    Geleneksel yöntemlerle hazırlanmış
+                    doğal salamura zeytin.
+                </p>
+
+                <button
+                    class="order-button"
+                    data-product="Salamura Zeytin"
+                >
+                    Sipariş Ver
+                </button>
+
+            </article>
+
+        </section>
+
+
+        <!-- SİPARİŞ FORMU -->
+        <section class="order-section" id="orderSection">
+
+            <h2>Sipariş Bilgileri</h2>
+
+
+            <form id="orderForm">
+
+                <div>
+                    <label for="customerName">
+                        Ad Soyad
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        required
+                    >
+                </div>
+
+
+                <div>
+                    <label for="phone">
+                        Telefon
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="05XXXXXXXXX"
+                        required
+                    >
+                </div>
+
+
+                <div>
+                    <label for="address">
+                        Adres
+                    </label>
+
+                    <textarea
+                        id="address"
+                        rows="4"
+                        required
+                    ></textarea>
+                </div>
+
+
+                <div>
+                    <label for="product">
+                        Ürün
+                    </label>
+
+                    <select id="product" required>
+
+                        <option value="">
+                            Ürün seçiniz
+                        </option>
+
+                        <option value="Zeytinyağı">
+                            Zeytinyağı
+                        </option>
+
+                        <option value="Zeytin">
+                            Zeytin
+                        </option>
+
+                        <option value="Salamura Zeytin">
+                            Salamura Zeytin
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <div>
+                    <label for="quantity">
+                        Miktar
+                    </label>
+
+                    <select id="quantity" required>
+
+                        <option value="">
+                            Önce ürün seçiniz
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <button type="submit">
+                    Siparişi Oluştur
+                </button>
+
+            </form>
+
+
+            <p id="orderMessage"></p>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/products.js"></script>
+
+</body>
+</html>
